@@ -31,9 +31,10 @@ CREATE TABLE materias(
 CREATE TABLE registros(
     id INT AUTO_INCREMENT PRIMARY KEY,
     creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    tipo ENUM('P','T','A','RA','AP'),
+    tipo ENUM('P','T','A','RA'),
     alumno INT,
     materia INT,
     FOREIGN KEY (alumno) REFERENCES alumnos(id),
     FOREIGN KEY (materia) REFERENCES materias(id)
+
 );
