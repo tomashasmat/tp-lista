@@ -1,20 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Lista</title>
+    <title>Listado</title>
 </head>
 <body>
-    <button>
-        
-    </button>
 
-    <h2>Listado</h2>
+    <h1 class="titulo">Listado</h1>
 
+    <div class="filtros">
+        <select id="selectCurso"></select>
+        <select id="selectMateria"></select>
+    </div>
 
+    <table id="tablaAlumnos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>P</th>
+                <th>A</th>
+                <th>T</th>
+                <th>RA</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            
+        </tbody>
+    </table>   
 </body>
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </html>
