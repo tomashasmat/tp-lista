@@ -1,3 +1,24 @@
+function cargarAlumnos(e){
+    e.preventDefault();
+    let lista = e.target.lista.value.split('\n');
+    let data = [];
+    for(let elem of lista){
+        let alumno = {};
+        alumno.nombres = elem.split(' ')[0];
+        alumno.apellidos = elem.split(' ')[1];
+        alumno.curso = e.target.curso.value;
+        data.push(alumno);
+    }
+
+    const options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    };
+    fetch('https://localhost:3000/api/alumnos', options);
+    e.target.reset();
+}
+
 function cargarLista(e){
     const materiaId = e.target.value;
     fetch('http://localhost:3000/api/alumnos/')
@@ -73,17 +94,17 @@ function handleClick(event){
     };
 
     const options = {
-        method = 'POST',
+        method: 'POST',
         body: JSON.stringify(datos),
         headers: {'Content-Type': 'application/json'}
     }
 
-    const url = ('https://localhost:3000/api/asistencias');
+    const url = 'https://localhost:3000/api/asistencias';
     fetch(url, options)
         .then(res => res.json())
-        .then(data {
-
-        });
+        .then(data => {
+            //cosas
+        })
     .catch(err => alert(err.stack));
 
 }
