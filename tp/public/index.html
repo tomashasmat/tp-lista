@@ -8,28 +8,32 @@
     <title>Listado</title>
 </head>
 <body>
-
-    <h1 class="titulo">Listado</h1>
-
-    <div class="filtros">
-        <select id="cursos"></select>
-        <select id="materias"></select>
-    </div>
-
-    <table id="tablaAlumnos">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>N°</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Accion</th>
-            </tr>
-        </thead>
-        <tbody id="tableBody">
-            
-        </tbody>
-    </table>   
-</body>
+    <header class="encabezado">
+        <h1 class="titulo">Listado</h1>
+        <div class="filtros">
+            <select id="selectCurso"></select>
+            <select id="selectMateria"></select>
+        </div>
+    </header>
+    
+    <main>
+        <table id="tablaAlumnos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>P</th>
+                    <th>A</th>
+                    <th>T</th>
+                    <th>RA</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </main>
     <script src="main.js"></script>
+    <script src="index.js"></script>
+</body>
 </html>
