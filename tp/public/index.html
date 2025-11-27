@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Listado</title>
+    <title>Asistencias</title>
 </head>
 <body>
     <header class="encabezado">
-        <h1 class="titulo">Listado</h1>
+        <h1 class="titulo">Asistencias</h1>
         <div class="filtros">
             <select id="cursos"></select>
             <select id="materias"></select>
@@ -28,16 +28,53 @@
                 </tr>
             </thead>
             <tbody id="tableBody">
-                
-            </tbody>
+                </tbody>
         </table>
-        <hr></hr>
-    </main>
+
+        <hr>
+
+        <div class="historial-container" style="text-align: center; width: 85%;">
+            <h2>Consulta asistencias anteriores</h2>
+            <label for="fechaBusqueda">Seleccione fecha: </label>
+            <input type="date" id="fechaBusqueda">
+            
+            <h3 id="mensajeHistorial" style="color: #c90000; margin-top: 5px;"></h3>
+
+            <table id="tablaHistorial" style="width: 100%; border-collapse: collapse; margin-top: 15px; display: none;">
+                <thead>
+                    <tr style="background-color: #333; color: white;">
+                        <th>Orden</th>
+                        <th>Apellido y Nombre</th>
+                        <th>Estado</th>
+                        <th>Hora Registro</th>
+                        <th>Acciones</th> </tr>
+                    </tr>
+                </thead>
+                <tbody id="bodyHistorial">
+                    </tbody>
+            </table>
+        </div>
+        <hr>
+
+        <div class="carga-alumnos-container" style="width: 85%; margin-top: 20px;">
+            <h2>Ingrese nuevos alumnos</h2>
+            <form id="formCargaAlumnos" class="form-carga">
+                <div class="form-row">
+                    <label for="cursoCarga">Curso:</label>
+                    <select id="cursoCarga"></select>
+                </div>
+                <div class="form-row">
+                    <label for="listaAlumnos">Alumnos:</label>
+                    <textarea id="listaAlumnos" name="lista" rows="10" placeholder="Ejemplo:
+Nombre,Apellido,DNI(Opcional)
+Tomas,Hasmat,45321456
+Agustin,Albina,40123456"></textarea>
+                </div>
+                <button type="submit">Cargar</button>
+            </form>
+        </div>
+        </main>
+
     <script src="main.js"></script>
-    <script src="index.js"></script>
 </body>
 </html>
-
-
-
-
